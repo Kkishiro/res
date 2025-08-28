@@ -75,20 +75,25 @@
         }
         
         .profile-img {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             margin: 0 auto 24px;
-            background: linear-gradient(135deg, #e6f0ff 0%, #f0f5ff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--apple-blue);
-            font-size: 48px;
+            overflow: hidden;
             box-shadow: 
                 0 4px 20px rgba(0, 0, 0, 0.05),
                 0 0 0 1px rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, #e6f0ff 0%, #f0f5ff 100%);
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .name {
@@ -405,9 +410,8 @@
             }
             
             .profile-img {
-                width: 120px;
-                height: 120px;
-                font-size: 40px;
+                width: 140px;
+                height: 140px;
             }
             
             .name {

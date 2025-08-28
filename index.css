@@ -2,63 +2,63 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
-  }
-  *, *:before, *:after {
+}
+*, *:before, *:after {
     box-sizing: inherit;
-  }
-  body{
+}
+body{
     background:#E6E4E7;
     font-family: 'Arimo', sans-serif;
     color:#444;
-  }
-  ul{
+}
+ul{
     list-style-type:none;
     margin:0;
     padding:0;
-  }
-  li{
+}
+li{
     margin:0;
-  }
-  h1, h2, h3, h4, h5, h6{
+}
+h1, h2, h3, h4, h5, h6{
     font-family:"Raleway", sans-serif;
     font-weight: 400;
     text-transform:uppercase;
-  }
-  h2, h3, h4, h5, h6{
+}
+h2, h3, h4, h5, h6{
     margin:0;
     margin-bottom:12px;
-  }
-  h1{
+}
+h1{
     font-size:32px;
-  }
-  h2{
+}
+h2{
     font-size:28px;
-  }
-  h3{
+}
+h3{
     font-size:24px;
-  }
-  h4{
+}
+h4{
     font-size:22px;
     @media screen and (max-width: 600px) {
       font-size:16px;
     }
-  }
-  h5{
+}
+h5{
     font-size:18px;
-  }
-  h6{
+}
+h6{
     font-size:16px;
-  }
-  a{
+}
+a{
     text-decoration:none;
     font-family:inherit;
-  }
-  .link{
+}
+.link{
     &--white{
       color:#1FC1AD;
     }
-  }
-  .main{
+}
+.main{
     border-radius:3px;
     background:white;
     margin:48px auto;
@@ -68,20 +68,22 @@ html {
     transition:all 250ms ease-in-out;
     transform:translate(0,0) scale(.5);
     opacity:0;
+
     @media screen and (min-width: 600px) {
       width:88%;
     }
+
     @media screen and (min-width: 1024px) {
       width:70%;
     }
-  }
-  .main.in-focus{
+}
+.main.in-focus{
     box-shadow: -48px 48px 48px 0px rgba(0,0,0,0.1);
     transition:all 250ms ease-in-out;
     transform:translate(0, 0) scale(1);
     opacity:1;
-  }
-  .resume{
+}
+.resume{
     &__header{
       overflow:hidden;
       border-top-left-radius: 3px;
@@ -141,10 +143,10 @@ html {
       margin-bottom:24px;
       padding:24px;
     }
-  }
+}
   
   
-  .list{
+.list{
     list-style-type:none;
     
     &--inline-block{
@@ -155,25 +157,25 @@ html {
         margin-left:12px;
       }
     }
-  }
+}
 
-  .absolute-b-r{
+.absolute-b-r{
     position:absolute;
     bottom:12px;
     right:12px;
-  }
-  .relative{
+}
+.relative{
     position:relative;
-  }
+}
   
-  .btn{
+.btn{
     &--page{
       position:fixed;
       bottom:24px;
       right:24px;
     }
-  }
-  .skills{
+}
+.skills{
     /*text-align:center;*/
     &__heading{
       /*text-align:left;*/
@@ -223,23 +225,23 @@ html {
         line-height: 1.75;
       }
     }
-  }
-  .skills__info.is--visible{
+}
+.skills__info.is--visible{
     transform:scale(1);
     transition:all 250ms ease-in-out;
     z-index:100;
-  }
-  .skills{
+}
+.skills{
     &__dd{
       display:inline;
       width:0;
       margin:0;
     }
-  }
-  .skills__dd.is--visible{
+}
+.skills__dd.is--visible{
     width:auto;
-  }
-  .education, .experience{
+}
+.education, .experience{
     border-bottom: 1px solid #e1e1e1;
     padding-bottom:24px;
     margin-bottom:12px;
@@ -252,8 +254,8 @@ html {
         line-height:1.4;
       }
     }
-  }
-  .experience{
+}
+.experience{
     &__more{
       background: #ffffff;
       padding: 12px;
@@ -274,8 +276,8 @@ html {
         max-width:70%;
       }
     }
-  }
-  .experience__more.is--expanded{
+}
+.experience__more.is--expanded{
     background: #f1f1f1;
     border-left:4px solid #1FC1AD;
     max-height:8888px;
@@ -284,19 +286,19 @@ html {
       transform:scale(1);
       transition:all 200ms ease-in-out;
     }
-  }
-  .heading{
+}
+.heading{
     &--section{
       background:#f1f1f1;
       border-left:6px solid #1FC1AD;
       padding:6px;
     }
-  }
-  .btn--more.is--visible{
+}
+.btn--more.is--visible{
     transform:scale(1);
     transition:all 250ms ease-in-out;
-  }
-  .btn{
+}
+.btn{
     &--more{
       transform:scale(0);
       width:72px;
@@ -327,25 +329,25 @@ html {
     right:24px;
     font-size:32px;
     }
-  }
-  .location::before{
+}
+.location::before{
     color:#1FC1AD;
-  }
-  .cn{
+}
+.cn{
     width:88px;
     position:absolute;
     bottom:-100%;
     left:84px;
     transition:all 250ms ease-in-out;
-  }
-  .cn.is--visible{
+}
+.cn.is--visible{
     bottom:0%;
     transition:all 250ms ease-in-out;
-  }
-  .color-change{
+}
+.color-change{
     background:#444;
     transition:all 250ms ease-in-out;
-  }
-  body{
+}
+body{
     transition:all 250ms ease-in-out;
-  }
+}

@@ -4,224 +4,447 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме - Студнева Карина Артемовна</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .left-column, .right-column {
-            padding: 15px;
+            padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .left-column {
-            flex: 1;
-            min-width: 300px;
-            border-right: 1px solid #ddd;
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
         }
-        .right-column {
-            flex: 1;
-            min-width: 300px;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        .section {
-            margin-bottom: 25px;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        h2 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 25px;
-        }
-        .contact-item, .info-item {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .icon {
-            margin-right: 10px;
-            width: 16px;
-            height: 16px;
-        }
-        ul {
-            padding-left: 20px;
-        }
+        
         .header {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            padding: 30px;
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            flex-wrap: wrap;
         }
+        
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin-right: 20px;
-            object-fit: cover;
-            background-color: #e0e0e0;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            background: #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #777;
-            font-size: 14px;
+            margin-right: 30px;
+            flex-shrink: 0;
         }
+        
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
         .name {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
-        .subsection {
+        
+        .title {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
             margin-top: 15px;
         }
-        .social-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-            vertical-align: middle;
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 50px;
         }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .left-column {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            background: #f9fafc;
+        }
+        
+        .right-column {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2 i {
+            color: #3498db;
+        }
+        
+        .info-item {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .info-item strong {
+            min-width: 180px;
+            margin-right: 10px;
+            color: #2c3e50;
+        }
+        
+        .info-content {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .subsection {
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 3px solid #e8e8e8;
+            padding-bottom: 5px;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill {
+            background: #e8f4fc;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .social-link:hover {
+            background: #2c3e50;
+            transform: translateY(-3px);
+        }
+        
         @media (max-width: 768px) {
-            .left-column {
-                border-right: none;
-                border-bottom: 1px solid #ddd;
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .profile-img {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 120px;
+                height: 120px;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .name {
+                font-size: 28px;
+            }
+            
+            .info-item strong {
+                min-width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .profile-info {
+                min-width: 100%;
+            }
+            
+            h2 {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-column">
-            <div class="header">
-                <div class="profile-img">Фото</div>
-                <div class="name">Студнева Карина Артемовна</div>
+        <div class="header">
+            <div class="profile-img">
+                <i class="fas fa-user fa-3x" style="color: #7f8c8d;"></i>
             </div>
-
-            <div class="section">
-                <h2>КОНТАКТЫ</h2>
-                <div class="contact-item">
-                    <span class="icon">📱</span>
-                    <span>+79003331461</span>
+            <div class="profile-info">
+                <h1 class="name">Студнева Карина Артемовна</h1>
+                <p class="title">Программист | Разработчик ПО</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+79003331461</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kishiro_k@mail.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Чебоксары</span>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <span class="icon">📧</span>
-                    <span>kishiro_k@mail.ru</span>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">📍</span>
-                    <span>Чебоксары</span>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">🔗</span>
-                    <span>
-                        <a href="https://t.me/kishiro" target="_blank">Telegram</a>
-                    </span>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>ОСНОВНАЯ ИНФОРМАЦИЯ</h2>
-                <div class="info-item">
-                    <strong>Желаемая зарплата:</strong> уровень дохода обсуждается на собеседовании
-                </div>
-                <div class="info-item">
-                    <strong>Занятость:</strong> полная
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>ЗНАНИЕ ЯЗЫКОВ</h2>
-                <div class="info-item">
-                    Английский (B1 — средний)
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>КОМПЬЮТЕРНЫЕ НАВЫКИ</h2>
-                <div class="subsection">
-                    <strong>Инструменты и технологии:</strong><br>
-                    Microsoft Office, Git, Linux, Windows, IDE (IntelliJ IDEA, PyCharm, VS Code, Android Studio)
-                </div>
-                <div class="subsection">
-                    <strong>Языки программирования:</strong><br>
-                    Python, Java, C++, JavaScript, Kotlin, PHP, SQL, HTML/CSS, XML, Prolog.
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>ДОПОЛНИТЕЛЬНО</h2>
-                <div class="info-item">
-                    <strong>Мои достижения:</strong> имеется профиль в Github, где вы можете просмотреть мои работы
-                    <a href="https://github.com/Kkishiro" target="_blank">https://github.com/Kkishiro</a>.
-                </div>
-                <div class="info-item">
-                    <strong>Место прохождения практики:</strong> АО «Научно-производственный комплекс «ЭЛАРА» им Г.А. Ильенко», отдел автоматизации инженерного документооборота (ОАИД).
-                </div>
-                <div class="info-item">
-                    Изучала информационные системы, сопровождаемые ОАИД (Lotsia PDM Plus, Документационный портал, Docsvision).
+                <div class="social-links">
+                    <a href="https://t.me/kishiro" class="social-link" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://github.com/Kkishiro" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
             </div>
         </div>
-
-        <div class="right-column">
-            <div class="section">
-                <h2>ЛИЧНАЯ ИНФОРМАЦИЯ</h2>
-                <div class="info-item">
-                    <strong>Гражданство:</strong> Российская Федерация
+        
+        <div class="content">
+            <div class="left-column">
+                <div class="section">
+                    <h2><i class="fas fa-user-circle"></i> Личная информация</h2>
+                    <div class="info-item">
+                        <strong>Гражданство:</strong>
+                        <span class="info-content">Российская Федерация</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Образование:</strong>
+                        <span class="info-content">высшее, бакалавр</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Дата рождения:</strong>
+                        <span class="info-content">18 декабря 2003 (21 год)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Пол:</strong>
+                        <span class="info-content">женский</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Семейное положение:</strong>
+                        <span class="info-content">не замужем</span>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <strong>Образование:</strong> высшее, бакалавр
+                
+                <div class="section">
+                    <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
+                    <div class="info-item">
+                        <strong>Университет:</strong>
+                        <span class="info-content">Чувашский Государственный университет имени И. Н. Ульянова</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Факультет:</strong>
+                        <span class="info-content">Прикладная математика, физика и информационные технологии</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Специальность:</strong>
+                        <span class="info-content">Математическое обеспечение и администрирование информационных систем</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Дата окончания:</strong>
+                        <span class="info-content">07/2025 <a href="https://github.com/Kkishiro/diploma-work/tree/main" target="_blank">(моя дипломная работа)</a></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Форма обучения:</strong>
+                        <span class="info-content">очная</span>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <strong>Дата рождения:</strong> 18 декабря 2003 (21 год)
-                </div>
-                <div class="info-item">
-                    <strong>Пол:</strong> женский
-                </div>
-                <div class="info-item">
-                    <strong>Семейное положение:</strong> не замужем
+                
+                <div class="section">
+                    <h2><i class="fas fa-certificate"></i> Курсы и тренинги</h2>
+                    <div class="subsection">
+                        <strong>Курс по машинному обучению. Проект «ИИ Старт»</strong>
+                        <div class="info-item">
+                            <strong>Учебное заведение:</strong>
+                            <span class="info-content">stepik.org</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Дата окончания:</strong>
+                            <span class="info-content">2024 год</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Период обучения:</strong>
+                            <span class="info-content">2 месяца</span>
+                        </div>
+                    </div>
+                    
+                    <div class="subsection">
+                        <strong>Программирование нейросетей на Python</strong>
+                        <div class="info-item">
+                            <strong>Учебное заведение:</strong>
+                            <span class="info-content">stepik.org</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Дата окончания:</strong>
+                            <span class="info-content">2024 год</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Период обучения:</strong>
+                            <span class="info-content">2 месяца</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="section">
-                <h2>ОБРАЗОВАНИЕ</h2>
-                <div class="info-item">
-                    <strong>Чувашский Государственный университет имени И. Н. Ульянова</strong><br>
-                    <strong>Факультет:</strong> Прикладная математика, физика и информационные технологии<br>
-                    <strong>Специальность:</strong> Математическое обеспечение и администрирование информационных систем<br>
-                    <strong>Дата окончания:</strong> 07/2025 
-                    <a href="https://github.com/Kkishiro/diploma-work/tree/main" target="_blank">(моя дипломная работа)</a><br>
-                    <strong>Форма обучения:</strong> очная
+            
+            <div class="right-column">
+                <div class="section">
+                    <h2><i class="fas fa-briefcase"></i> Основная информация</h2>
+                    <div class="info-item">
+                        <strong>Желаемая зарплата:</strong>
+                        <span class="info-content">уровень дохода обсуждается на собеседовании</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Занятость:</strong>
+                        <span class="info-content">полная</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="section">
-                <h2>КУРСЫ И ТРЕНИНГИ</h2>
-                <div class="subsection">
-                    <strong>Курс по машинному обучению. Проект «ИИ Старт»</strong><br>
-                    <strong>Учебное заведение:</strong> stepik.org<br>
-                    <strong>Дата окончания:</strong> 2024 год<br>
-                    <strong>Период обучения:</strong> 2 месяца
+                
+                <div class="section">
+                    <h2><i class="fas fa-language"></i> Знание языков</h2>
+                    <div class="info-item">
+                        <strong>Английский:</strong>
+                        <span class="info-content">B1 (средний уровень)</span>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <strong>Программирование нейросетей на Python</strong><br>
-                    <strong>Учебное заведение:</strong> stepik.org<br>
-                    <strong>Дата окончания:</strong> 2024 год<br>
-                    <strong>Период обучения:</strong> 2 месяца
+                
+                <div class="section">
+                    <h2><i class="fas fa-laptop-code"></i> Компьютерные навыки</h2>
+                    <div class="subsection">
+                        <strong>Инструменты и технологии:</strong>
+                        <div class="skills">
+                            <span class="skill">Microsoft Office</span>
+                            <span class="skill">Git</span>
+                            <span class="skill">Linux</span>
+                            <span class="skill">Windows</span>
+                            <span class="skill">IntelliJ IDEA</span>
+                            <span class="skill">PyCharm</span>
+                            <span class="skill">VS Code</span>
+                            <span class="skill">Android Studio</span>
+                        </div>
+                    </div>
+                    
+                    <div class="subsection">
+                        <strong>Языки программирования:</strong>
+                        <div class="skills">
+                            <span class="skill">Python</span>
+                            <span class="skill">Java</span>
+                            <span class="skill">C++</span>
+                            <span class="skill">JavaScript</span>
+                            <span class="skill">Kotlin</span>
+                            <span class="skill">PHP</span>
+                            <span class="skill">SQL</span>
+                            <span class="skill">HTML/CSS</span>
+                            <span class="skill">XML</span>
+                            <span class="skill">Prolog</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="section">
-                <h2>ЛИЧНЫЕ КАЧЕСТВА</h2>
-                <ul>
-                    <li>Мои личные качества включают развитое аналитическое мышление, позволяющее эффективно решать сложные задачи и находить оптимальные подходы к кодированию. Я отличаюсь быстрой обучаемостью, постоянно осваивая новые технологии и методологии разработки, что критично в динамичной IT-среде. Внимание к деталям и высокая степень ответственности гарантируют создание качественного и надежного программного обеспечения.</li>
-                    <li>Я — командный игрок, способный эффективно взаимодействовать с коллегами и вносить конструктивный вклад в общие проекты, ориентируясь на достижение поставленных целей.</li>
-                </ul>
+                
+                <div class="section">
+                    <h2><i class="fas fa-star"></i> Дополнительная информация</h2>
+                    <div class="info-item">
+                        <strong>Мои достижения:</strong>
+                        <span class="info-content">Имеется профиль в Github, где вы можете просмотреть мои работы <a href="https://github.com/Kkishiro" target="_blank">https://github.com/Kkishiro</a></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Место прохождения практики:</strong>
+                        <span class="info-content">АО «Научно-производственный комплекс «ЭЛАРА» им Г.А. Ильенко», отдел автоматизации инженерного документооборота (ОАИД)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Изученные системы:</strong>
+                        <span class="info-content">Lotsia PDM Plus, Документационный портал, Docsvision</span>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-heart"></i> Личные качества</h2>
+                    <ul>
+                        <li>Развитое аналитическое мышление, позволяющее эффективно решать сложные задачи и находить оптимальные подходы к кодированию.</li>
+                        <li>Быстрая обучаемость, постоянное освоение новых технологий и методологий разработки.</li>
+                        <li>Внимание к деталям и высокая степень ответственности гарантируют создание качественного и надежного программного обеспечения.</li>
+                        <li>Командный игрок, способный эффективно взаимодействовать с коллегами и вносить конструктивный вклад в общие проекты.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

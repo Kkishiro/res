@@ -6,302 +6,370 @@
     <title>Резюме - Студнева Карина Артемовна</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Apple-inspired styles */
+        :root {
+            --apple-gray-1: #f5f5f7;
+            --apple-gray-2: #e8e8ed;
+            --apple-gray-3: #86868b;
+            --apple-gray-4: #515154;
+            --apple-black: #1d1d1f;
+            --apple-blue: #0071e3;
+            --apple-blue-light: #2997ff;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         
         body {
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
+            background-color: var(--apple-gray-1);
+            color: var(--apple-black);
+            line-height: 1.47;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            padding: 0;
+            margin: 0;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 980px;
             margin: 0 auto;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            box-shadow: 0 2px 40px rgba(0, 0, 0, 0.05);
         }
         
         .header {
-            display: flex;
-            align-items: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #2c3e50, #4a6491);
-            color: white;
-            flex-wrap: wrap;
+            padding: 48px 48px 32px;
+            text-align: center;
+            background: linear-gradient(to bottom, white 70%, var(--apple-gray-1) 100%);
+            border-bottom: 1px solid var(--apple-gray-2);
         }
         
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            background: #e0e0e0;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, var(--apple-gray-2), var(--apple-gray-1));
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 30px;
-            flex-shrink: 0;
-        }
-        
-        .profile-info {
-            flex: 1;
-            min-width: 300px;
+            color: var(--apple-gray-3);
+            font-size: 48px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
         
         .name {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--apple-black);
         }
         
         .title {
-            font-size: 18px;
-            opacity: 0.9;
-            margin-bottom: 15px;
+            font-size: 21px;
+            color: var(--apple-gray-4);
+            margin-bottom: 24px;
+            font-weight: 400;
         }
         
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 8px 15px;
-            border-radius: 50px;
+            padding: 8px 16px;
+            background-color: var(--apple-gray-1);
+            border-radius: 98px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        
+        .contact-item:hover {
+            background-color: var(--apple-gray-2);
+            transform: scale(1.03);
         }
         
         .content {
             display: flex;
             flex-wrap: wrap;
+            padding: 0;
+        }
+        
+        .left-column, .right-column {
+            padding: 32px;
+            flex: 1;
+            min-width: 300px;
         }
         
         .left-column {
-            flex: 1;
-            min-width: 300px;
-            padding: 30px;
-            background: #f9fafc;
-        }
-        
-        .right-column {
-            flex: 1;
-            min-width: 300px;
-            padding: 30px;
+            background-color: var(--apple-gray-1);
+            border-right: 1px solid var(--apple-gray-2);
         }
         
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         h2 {
-            color: #2c3e50;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #3498db;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--apple-black);
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
         h2 i {
-            color: #3498db;
+            color: var(--apple-blue);
+            width: 24px;
+            text-align: center;
         }
         
         .info-item {
-            margin-bottom: 15px;
-            display: flex;
-            flex-wrap: wrap;
+            margin-bottom: 16px;
         }
         
         .info-item strong {
-            min-width: 180px;
-            margin-right: 10px;
-            color: #2c3e50;
+            display: block;
+            font-size: 14px;
+            color: var(--apple-gray-4);
+            margin-bottom: 4px;
+            font-weight: 500;
         }
         
         .info-content {
-            flex: 1;
-            min-width: 250px;
+            font-size: 17px;
+            line-height: 1.47;
         }
         
         .subsection {
-            margin-bottom: 20px;
-            padding-left: 10px;
-            border-left: 3px solid #e8e8e8;
-            padding-bottom: 5px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--apple-gray-2);
+        }
+        
+        .subsection:last-child {
+            border-bottom: none;
         }
         
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 8px;
+            margin-top: 8px;
         }
         
         .skill {
-            background: #e8f4fc;
-            padding: 5px 15px;
-            border-radius: 20px;
+            background: var(--apple-gray-2);
+            padding: 6px 14px;
+            border-radius: 98px;
             font-size: 14px;
-            color: #2c3e50;
+            color: var(--apple-gray-4);
+            transition: all 0.2s ease;
+        }
+        
+        .skill:hover {
+            background: var(--apple-blue-light);
+            color: white;
+            transform: scale(1.05);
         }
         
         ul {
-            padding-left: 20px;
-            margin: 10px 0;
+            list-style: none;
+            padding-left: 0;
         }
         
         li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 17px;
+            line-height: 1.47;
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--apple-blue);
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         
         a {
-            color: #2980b9;
+            color: var(--apple-blue);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.2s ease;
         }
         
         a:hover {
-            color: #2c3e50;
+            color: var(--apple-blue-light);
             text-decoration: underline;
         }
         
         .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 16px;
+            margin-top: 24px;
+            justify-content: center;
         }
         
         .social-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #3498db;
-            color: white;
+            width: 44px;
+            height: 44px;
+            background: var(--apple-gray-2);
+            color: var(--apple-gray-4);
             border-radius: 50%;
-            transition: transform 0.3s, background 0.3s;
+            transition: all 0.2s ease;
         }
         
         .social-link:hover {
-            background: #2c3e50;
-            transform: translateY(-3px);
+            background: var(--apple-blue);
+            color: white;
+            transform: scale(1.1);
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 734px) {
             .header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
+                padding: 32px 24px 24px;
             }
             
-            .profile-img {
-                margin-right: 0;
-                margin-bottom: 20px;
-                width: 120px;
-                height: 120px;
+            .name {
+                font-size: 32px;
+            }
+            
+            .title {
+                font-size: 19px;
+            }
+            
+            .left-column, .right-column {
+                padding: 24px;
+            }
+            
+            .left-column {
+                border-right: none;
+                border-bottom: 1px solid var(--apple-gray-2);
             }
             
             .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .contact-item {
+                width: 100%;
                 justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 40px;
             }
             
             .name {
                 font-size: 28px;
             }
             
-            .info-item strong {
-                min-width: 100%;
-                margin-bottom: 5px;
+            h2 {
+                font-size: 22px;
+            }
+            
+            .info-content {
+                font-size: 16px;
             }
         }
         
-        @media (max-width: 480px) {
-            .contact-item {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .profile-info {
-                min-width: 100%;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
+        /* Apple-like subtle animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
+        
+        .section {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="profile-img">
-                <i class="fas fa-user fa-3x" style="color: #7f8c8d;"></i>
+                <i class="fas fa-user"></i>
             </div>
-            <div class="profile-info">
-                <h1 class="name">Студнева Карина Артемовна</h1>
-                <p class="title">Программист | Разработчик ПО</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+79003331461</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>kishiro_k@mail.ru</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Чебоксары</span>
-                    </div>
+            <h1 class="name">Студнева Карина Артемовна</h1>
+            <p class="title">Разработчик программного обеспечения</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+79003331461</span>
                 </div>
-                <div class="social-links">
-                    <a href="https://t.me/kishiro" class="social-link" target="_blank">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="https://github.com/Kkishiro" class="social-link" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>kishiro_k@mail.ru</span>
                 </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Чебоксары</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://t.me/kishiro" class="social-link" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://github.com/Kkishiro" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
         </div>
         
         <div class="content">
             <div class="left-column">
                 <div class="section">
-                    <h2><i class="fas fa-user-circle"></i> Личная информация</h2>
+                    <h2><i class="fas fa-user"></i> Личная информация</h2>
                     <div class="info-item">
-                        <strong>Гражданство:</strong>
+                        <strong>Гражданство</strong>
                         <span class="info-content">Российская Федерация</span>
                     </div>
                     <div class="info-item">
-                        <strong>Образование:</strong>
+                        <strong>Образование</strong>
                         <span class="info-content">высшее, бакалавр</span>
                     </div>
                     <div class="info-item">
-                        <strong>Дата рождения:</strong>
+                        <strong>Дата рождения</strong>
                         <span class="info-content">18 декабря 2003 (21 год)</span>
                     </div>
                     <div class="info-item">
-                        <strong>Пол:</strong>
+                        <strong>Пол</strong>
                         <span class="info-content">женский</span>
                     </div>
                     <div class="info-item">
-                        <strong>Семейное положение:</strong>
+                        <strong>Семейное положение</strong>
                         <span class="info-content">не замужем</span>
                     </div>
                 </div>
@@ -309,23 +377,23 @@
                 <div class="section">
                     <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
                     <div class="info-item">
-                        <strong>Университет:</strong>
+                        <strong>Университет</strong>
                         <span class="info-content">Чувашский Государственный университет имени И. Н. Ульянова</span>
                     </div>
                     <div class="info-item">
-                        <strong>Факультет:</strong>
+                        <strong>Факультет</strong>
                         <span class="info-content">Прикладная математика, физика и информационные технологии</span>
                     </div>
                     <div class="info-item">
-                        <strong>Специальность:</strong>
+                        <strong>Специальность</strong>
                         <span class="info-content">Математическое обеспечение и администрирование информационных систем</span>
                     </div>
                     <div class="info-item">
-                        <strong>Дата окончания:</strong>
-                        <span class="info-content">07/2025 <a href="https://github.com/Kkishiro/diploma-work/tree/main" target="_blank">(моя дипломная работа)</a></span>
+                        <strong>Дата окончания</strong>
+                        <span class="info-content">07/2025 <a href="https://github.com/Kkishiro/diploma-work/tree/main" target="_blank">(дипломная работа)</a></span>
                     </div>
                     <div class="info-item">
-                        <strong>Форма обучения:</strong>
+                        <strong>Форма обучения</strong>
                         <span class="info-content">очная</span>
                     </div>
                 </div>
@@ -335,15 +403,15 @@
                     <div class="subsection">
                         <strong>Курс по машинному обучению. Проект «ИИ Старт»</strong>
                         <div class="info-item">
-                            <strong>Учебное заведение:</strong>
+                            <strong>Учебное заведение</strong>
                             <span class="info-content">stepik.org</span>
                         </div>
                         <div class="info-item">
-                            <strong>Дата окончания:</strong>
+                            <strong>Дата окончания</strong>
                             <span class="info-content">2024 год</span>
                         </div>
                         <div class="info-item">
-                            <strong>Период обучения:</strong>
+                            <strong>Период обучения</strong>
                             <span class="info-content">2 месяца</span>
                         </div>
                     </div>
@@ -351,15 +419,15 @@
                     <div class="subsection">
                         <strong>Программирование нейросетей на Python</strong>
                         <div class="info-item">
-                            <strong>Учебное заведение:</strong>
+                            <strong>Учебное заведение</strong>
                             <span class="info-content">stepik.org</span>
                         </div>
                         <div class="info-item">
-                            <strong>Дата окончания:</strong>
+                            <strong>Дата окончания</strong>
                             <span class="info-content">2024 год</span>
                         </div>
                         <div class="info-item">
-                            <strong>Период обучения:</strong>
+                            <strong>Период обучения</strong>
                             <span class="info-content">2 месяца</span>
                         </div>
                     </div>
@@ -370,11 +438,11 @@
                 <div class="section">
                     <h2><i class="fas fa-briefcase"></i> Основная информация</h2>
                     <div class="info-item">
-                        <strong>Желаемая зарплата:</strong>
+                        <strong>Желаемая зарплата</strong>
                         <span class="info-content">уровень дохода обсуждается на собеседовании</span>
                     </div>
                     <div class="info-item">
-                        <strong>Занятость:</strong>
+                        <strong>Занятость</strong>
                         <span class="info-content">полная</span>
                     </div>
                 </div>
@@ -382,7 +450,7 @@
                 <div class="section">
                     <h2><i class="fas fa-language"></i> Знание языков</h2>
                     <div class="info-item">
-                        <strong>Английский:</strong>
+                        <strong>Английский</strong>
                         <span class="info-content">B1 (средний уровень)</span>
                     </div>
                 </div>
@@ -390,7 +458,7 @@
                 <div class="section">
                     <h2><i class="fas fa-laptop-code"></i> Компьютерные навыки</h2>
                     <div class="subsection">
-                        <strong>Инструменты и технологии:</strong>
+                        <strong>Инструменты и технологии</strong>
                         <div class="skills">
                             <span class="skill">Microsoft Office</span>
                             <span class="skill">Git</span>
@@ -404,7 +472,7 @@
                     </div>
                     
                     <div class="subsection">
-                        <strong>Языки программирования:</strong>
+                        <strong>Языки программирования</strong>
                         <div class="skills">
                             <span class="skill">Python</span>
                             <span class="skill">Java</span>
@@ -423,15 +491,15 @@
                 <div class="section">
                     <h2><i class="fas fa-star"></i> Дополнительная информация</h2>
                     <div class="info-item">
-                        <strong>Мои достижения:</strong>
-                        <span class="info-content">Имеется профиль в Github, где вы можете просмотреть мои работы <a href="https://github.com/Kkishiro" target="_blank">https://github.com/Kkishiro</a></span>
+                        <strong>Мои достижения</strong>
+                        <span class="info-content">Профиль на GitHub с примерами работ: <a href="https://github.com/Kkishiro" target="_blank">github.com/Kkishiro</a></span>
                     </div>
                     <div class="info-item">
-                        <strong>Место прохождения практики:</strong>
+                        <strong>Место прохождения практики</strong>
                         <span class="info-content">АО «Научно-производственный комплекс «ЭЛАРА» им Г.А. Ильенко», отдел автоматизации инженерного документооборота (ОАИД)</span>
                     </div>
                     <div class="info-item">
-                        <strong>Изученные системы:</strong>
+                        <strong>Изученные системы</strong>
                         <span class="info-content">Lotsia PDM Plus, Документационный портал, Docsvision</span>
                     </div>
                 </div>

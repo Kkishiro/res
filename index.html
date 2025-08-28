@@ -6,46 +6,72 @@
     <title>Резюме - Студнева Карина Артемовна</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Apple-inspired styles */
+        /* Apple-inspired styles with latest design cues */
         :root {
+            --apple-background: #fbfbfd;
+            --apple-card-background: #ffffff;
+            --apple-text-primary: #1d1d1f;
+            --apple-text-secondary: #86868b;
+            --apple-blue: #0071e3;
+            --apple-blue-hover: #0077ED;
             --apple-gray-1: #f5f5f7;
             --apple-gray-2: #e8e8ed;
             --apple-gray-3: #86868b;
             --apple-gray-4: #515154;
-            --apple-black: #1d1d1f;
-            --apple-blue: #0071e3;
-            --apple-blue-light: #2997ff;
+            --apple-border: #d2d2d7;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         
         body {
-            background-color: var(--apple-gray-1);
-            color: var(--apple-black);
+            background: linear-gradient(135deg, #f9f9ff 0%, #f5f5f7 100%);
+            color: var(--apple-text-primary);
             line-height: 1.47;
             font-weight: 400;
             letter-spacing: -0.022em;
             padding: 0;
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
         
         .container {
             max-width: 980px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 2px 40px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            background: var(--apple-card-background);
+            border-radius: 20px;
+            box-shadow: 
+                0 0 1px rgba(0, 0, 0, 0.01),
+                0 4px 8px rgba(0, 0, 0, 0.02),
+                0 8px 16px rgba(0, 0, 0, 0.02),
+                0 16px 32px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
         }
         
         .header {
             padding: 48px 48px 32px;
             text-align: center;
             background: linear-gradient(to bottom, white 70%, var(--apple-gray-1) 100%);
-            border-bottom: 1px solid var(--apple-gray-2);
+            border-bottom: 1px solid var(--apple-border);
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--apple-border), transparent);
         }
         
         .profile-img {
@@ -53,25 +79,29 @@
             height: 140px;
             border-radius: 50%;
             margin: 0 auto 24px;
-            background: linear-gradient(135deg, var(--apple-gray-2), var(--apple-gray-1));
+            background: linear-gradient(135deg, #e6f0ff 0%, #f0f5ff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--apple-gray-3);
+            color: var(--apple-blue);
             font-size: 48px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.05),
+                0 0 0 1px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .name {
             font-size: 40px;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 8px;
-            color: var(--apple-black);
+            color: var(--apple-text-primary);
+            letter-spacing: -0.5px;
         }
         
         .title {
             font-size: 21px;
-            color: var(--apple-gray-4);
+            color: var(--apple-text-secondary);
             margin-bottom: 24px;
             font-weight: 400;
         }
@@ -80,7 +110,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 16px;
+            gap: 12px;
             margin-top: 24px;
         }
         
@@ -88,18 +118,24 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
+            padding: 10px 18px;
             background-color: var(--apple-gray-1);
             border-radius: 98px;
             font-size: 14px;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
             text-decoration: none;
-            color: var(--apple-black);
+            color: var(--apple-text-primary);
+            border: 1px solid transparent;
         }
         
         .contact-item:hover {
             background-color: var(--apple-gray-2);
             transform: scale(1.03);
+            border-color: var(--apple-border);
+        }
+        
+        .contact-item:active {
+            transform: scale(0.98);
         }
         
         .content {
@@ -116,7 +152,17 @@
         
         .left-column {
             background-color: var(--apple-gray-1);
-            border-right: 1px solid var(--apple-gray-2);
+            position: relative;
+        }
+        
+        .left-column::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, var(--apple-border), transparent);
         }
         
         .section {
@@ -125,12 +171,13 @@
         
         h2 {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 650;
             margin-bottom: 16px;
-            color: var(--apple-black);
+            color: var(--apple-text-primary);
             display: flex;
             align-items: center;
             gap: 10px;
+            letter-spacing: -0.25px;
         }
         
         h2 i {
@@ -146,7 +193,7 @@
         .info-item strong {
             display: block;
             font-size: 14px;
-            color: var(--apple-gray-4);
+            color: var(--apple-text-secondary);
             margin-bottom: 4px;
             font-weight: 500;
         }
@@ -159,7 +206,7 @@
         .subsection {
             margin-bottom: 24px;
             padding-bottom: 16px;
-            border-bottom: 1px solid var(--apple-gray-2);
+            border-bottom: 1px solid var(--apple-border);
         }
         
         .subsection:last-child {
@@ -178,14 +225,16 @@
             padding: 6px 14px;
             border-radius: 98px;
             font-size: 14px;
-            color: var(--apple-gray-4);
+            color: var(--apple-text-secondary);
             transition: all 0.2s ease;
+            border: 1px solid transparent;
         }
         
         .skill:hover {
-            background: var(--apple-blue-light);
+            background: var(--apple-blue);
             color: white;
             transform: scale(1.05);
+            border-color: var(--apple-blue);
         }
         
         ul {
@@ -207,6 +256,7 @@
             position: absolute;
             left: 0;
             top: 0;
+            font-size: 20px;
         }
         
         a {
@@ -216,7 +266,7 @@
         }
         
         a:hover {
-            color: var(--apple-blue-light);
+            color: var(--apple-blue-hover);
             text-decoration: underline;
         }
         
@@ -233,17 +283,35 @@
             justify-content: center;
             width: 44px;
             height: 44px;
-            background: var(--apple-gray-2);
-            color: var(--apple-gray-4);
+            background: var(--apple-gray-1);
+            color: var(--apple-text-secondary);
             border-radius: 50%;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            border: 1px solid transparent;
         }
         
         .social-link:hover {
             background: var(--apple-blue);
             color: white;
             transform: scale(1.1);
+            border-color: var(--apple-blue);
         }
+        
+        /* Apple-like subtle animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
         
         @media (max-width: 734px) {
             .header {
@@ -264,7 +332,11 @@
             
             .left-column {
                 border-right: none;
-                border-bottom: 1px solid var(--apple-gray-2);
+                border-bottom: 1px solid var(--apple-border);
+            }
+            
+            .left-column::after {
+                display: none;
             }
             
             .contact-info {
@@ -280,6 +352,10 @@
         }
         
         @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
             .profile-img {
                 width: 120px;
                 height: 120px;
@@ -298,22 +374,6 @@
                 font-size: 16px;
             }
         }
-        
-        /* Apple-like subtle animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .section {
-            animation: fadeIn 0.5s ease forwards;
-        }
-        
-        .section:nth-child(1) { animation-delay: 0.1s; }
-        .section:nth-child(2) { animation-delay: 0.2s; }
-        .section:nth-child(3) { animation-delay: 0.3s; }
-        .section:nth-child(4) { animation-delay: 0.4s; }
-        .section:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
@@ -330,10 +390,10 @@
                     <i class="fas fa-phone"></i>
                     <span>+79003331461</span>
                 </a>
-                <div class="contact-item">
+                <a href="mailto:kishiro_k@mail.ru" class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:kishiro_k@mail.ru"><span>kishiro_k@mail.ru</span></a>
-                </div>
+                    <span>kishiro_k@mail.ru</span>
+                </a>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Чебоксары</span>
